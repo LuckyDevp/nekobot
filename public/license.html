@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licencia MIT | NekoxPrime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8B4513;
+            --secondary: #F5E7D4;
+            --dark: #5C3A21;
+            --light: #FFF8E1;
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            background-color: #f0e6d2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+        }
+        
+        .header-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 8px solid var(--dark);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+        
+        .license-container {
+            background-color: var(--secondary);
+            border: 2px solid var(--dark);
+            padding: 40px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+        
+        .license-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 15px;
+        }
+        
+        .license-header h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .license-header p {
+            color: var(--dark);
+            font-style: italic;
+            margin: 5px 0 0;
+        }
+        
+        .license-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+        
+        .license-content p {
+            margin-bottom: 20px;
+            text-indent: 20px;
+        }
+        
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 40px auto 0;
+            padding: 12px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: all 0.3s;
+            border: 2px solid var(--dark);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .download-btn:hover {
+            background-color: #6B3410;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        }
+        
+        .download-btn i {
+            margin-right: 8px;
+        }
+        
+        .seal {
+            position: absolute;
+            top: -50px;
+            right: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: #D4AF37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 5px solid var(--dark);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+            font-size: 2rem;
+            color: var(--dark);
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .header-image {
+                height: 180px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .license-container {
+                padding: 20px;
+                margin-top: -30px;
+            }
+            
+            .seal {
+                width: 70px;
+                height: 70px;
+                top: -35px;
+                right: 20px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Imagen superior -->
+    <img src="https://images.unsplash.com/photo-1601662528567-526cd06f6582?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Libro antiguo" class="header-image">
+    
+    <div class="container">
+        <div class="license-container">
+            <div class="seal">MIT</div>
+            
+            <div class="license-header">
+                <h1>Licencia MIT</h1>
+                <p>Copyright (c) 2024 Angelo Jesus Rodriguez Cruz</p>
+            </div>
+            
+            <div class="license-content">
+                <p>Se concede permiso por la presente, sin cargo alguno, a cualquier persona que obtenga una copia de este software y los archivos de documentación asociados (el "Software"), para tratar en el Software sin restricciones, incluidos, entre otros, los derechos usar, copiar, modificar, fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software y permitir que las personas a quienes se dirige el Software equipado para ello, sujeto a las siguientes condiciones:</p>
+                
+                <p>El aviso de derechos de autor anterior y este aviso de permiso se incluirán en todas las copias o partes sustanciales del Software.</p>
+                
+                <p>EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O IMPLÍCITAS, INCLUYENDO, ENTRE OTRAS, LAS GARANTÍAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y NO INFRACCIÓN. EN NINGÚN CASO LOS AUTORES O TITULARES DE LOS DERECHOS DE AUTOR SERÁN RESPONSABLES DE CUALQUIER RECLAMACIÓN, DAÑO U OTRA RESPONSABILIDAD, YA SEA EN UNA ACCIÓN CONTRACTUAL, EXTRACONTRACTUAL O DE OTRO MODO, QUE SURJA DE, FUERA DE O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRAS OPERACIONES EN EL SOFTWARE.</p>
+            </div>
+            
+            <a href="license" class="download-btn">
+                <i class="fas fa-download"></i> Get License
+            </a>
+        </div>
+    </div>
+</body>
+</html>

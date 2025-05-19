@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos | NekoxPrime</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #f16436;
+            --secondary: #2c2c2c;
+            --dark: #1a1a1a;
+            --light: #f5f5f5;
+            --gray: #3d3d3d;
+            --text-gray: #aaaaaa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background-color: var(--dark);
+            border-bottom: 1px solid var(--gray);
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 32px;
+        }
+        
+        .logo span {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+        }
+        
+        .hero-content {
+            position: absolute;
+            bottom: 40px;
+            left: 50px;
+            max-width: 800px;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-gray);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--primary);
+        }
+        
+        .hero-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .hero-description {
+            font-size: 16px;
+            color: var(--text-gray);
+        }
+        
+        /* Projects Section */
+        .projects-container {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background-color: var(--secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 1px solid var(--gray);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--primary);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 20px;
+        }
+        
+        .project-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+        
+        .project-description {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .project-link {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .project-link:hover {
+            background-color: #e0552b;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            padding: 30px 50px;
+            text-align: center;
+            border-top: 1px solid var(--gray);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        .copyright {
+            color: var(--text-gray);
+            font-size: 13px;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px;
+            }
+            
+            .hero {
+                height: 250px;
+            }
+            
+            .hero-content {
+                left: 20px;
+                bottom: 20px;
+            }
+            
+            .projects-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Linux Logo">
+            <span>NekoxPrime</span>
+        </div>
+        <div class="nav-links">
+            <a href="soporte.html"><i class="fas fa-life-ring"></i> Soporte</a>
+            <a href="https://whatsapp.com/channel/0029VarSMCuL2AU2EUONKu08"><i class="fas fa-tv"></i> Canal</a>
+            <a href="proyectos.html"><i class="fas fa-folder"></i> Proyectos</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Background" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="breadcrumb">
+                <a href="#">Home</a> > <a href="#">Proyectos</a>
+            </div>
+            <h1 class="hero-title">Nuestros Proyectos</h1>
+            <p class="hero-description">Descubre los 4 proyectos principales de NekoxPrime</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <div class="projects-container">
+        <h2 class="section-title">Proyectos Destacados</h2>
+        
+        <div class="projects-grid">
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x225?text=Proyecto+1" alt="Proyecto 1" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Proyecto Aurora</h3>
+                    <p class="project-description">
+                        Sistema de gestión de contenido avanzado con inteligencia artificial integrada para personalización automática.
+                    </p>
+                    <a href="https://ejemplo.com/proyecto-aurora" class="project-link" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+            
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x225?text=Proyecto+2" alt="Proyecto 2" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Nexus Framework</h3>
+                    <p class="project-description">
+                        Framework de desarrollo web modular para crear aplicaciones escalables con alto rendimiento.
+                    </p>
+                    <a href="https://ejemplo.com/nexus-framework" class="project-link" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+            
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x225?text=Proyecto+3" alt="Proyecto 3" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Quantum DB</h3>
+                    <p class="project-description">
+                        Sistema de base de datos distribuida con replicación en tiempo real y sincronización multi-nube.
+                    </p>
+                    <a href="https://ejemplo.com/quantum-db" class="project-link" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+            
+            <!-- Proyecto 4 -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/400x225?text=Proyecto+4" alt="Proyecto 4" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Edge Security</h3>
+                    <p class="project-description">
+                        Suite de seguridad perimetral con protección avanzada contra amenazas y análisis de comportamiento.
+                    </p>
+                    <a href="https://ejemplo.com/edge-security" class="project-link" target="_blank">Ver Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="p.html">Privacidad</a>
+            <a href="license.html">Política de licencia</a>
+        </div>
+        <p class="copyright">&copy; NekoxPrime. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

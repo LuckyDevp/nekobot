@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NekoxPrime Bot Integration</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .bot-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: var(--secondary);
+            border-radius: 8px;
+            border: 1px solid var(--gray);
+        }
+        
+        .bot-widget {
+            border: 1px solid var(--gray);
+            border-radius: 8px;
+            height: 500px;
+            overflow-y: auto;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background-color: var(--dark);
+        }
+        
+        .bot-message {
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 18px;
+            max-width: 70%;
+        }
+        
+        .bot-message.received {
+            background-color: var(--gray);
+            margin-right: auto;
+        }
+        
+        .bot-message.sent {
+            background-color: var(--primary);
+            margin-left: auto;
+            color: white;
+        }
+        
+        .bot-input {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .bot-input input {
+            flex-grow: 1;
+            padding: 0.75rem;
+            border-radius: 8px;
+            border: 1px solid var(--gray);
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .bot-input button {
+            padding: 0 1.5rem;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bot-container">
+            <h1>NekoxPrime Bot</h1>
+            <div class="bot-widget" id="botChat">
+                <!-- Mensajes aparecerán aquí -->
+            </div>
+            <div class="bot-input">
+                <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+                <button id="sendButton">Enviar</button>
+            </div>
+            <div class="bot-stats" id="botStats">
+                <h3>Estadísticas del Bot:</h3>
+                <p>Usuarios totales: <span id="totalUsers">0</span></p>
+                <p>Inicios de sesión: <span id="startCount">0</span></p>
+                <p>Autenticaciones exitosas: <span id="successAuth">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/bot-widget.js"></script>
+</body>
+</html>
